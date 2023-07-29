@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CURD operations</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body>
+   <div class="w-75 py-4 mx-auto">
+    <div class="was-validated">
+    <label for="productName">productName : </label>
+    <input type="text" class="form-control my-2 " id="productName" name="" required>
+    <div class="invalid-feedback">Please fill out this field.</div>
+</div>
+
+    <label for="productPrice">productPrice : </label>
+    <input type="number" class="form-control my-2" id="productPrice" name="">
+
+    <label for="productCategory">productCategory : </label>
+    <input type="text" class="form-control my-2" id="productCategory" name="">
+
+    <label for="productDesc">productDesc : </label>
+    <!-- <input type="text" class="form-control my-2" id="productDesc" name=""> -->
+    <textarea class="form-control my-2" id="productDesc"></textarea>
+
+    <button onclick="addProduct()" class="btn btn-primary" id="addBtn">Add Product</button>
+   </div>
+   <div class="w-75  mx-auto">
+    <div class="w-75 mx-auto py-4">
+        <!-- <label for="searchInput" class="py-2 ">Search :</label> -->
+        <input onkeyup='searchProducts(this.value)' type="text" class="form-control " id="searchInput" placeholder="Search">
+    </div>
+    <table class="table table-striped">
+        <thead>
+        <th>Index</th>
+        <th>productName</th>
+        <th>productPrice</th>
+        <th>productCategory</th>
+        <th>productDesc</th>
+        <th>Update</th>
+        <th>Delete</th>
+    </thead>
+    <tbody id="tableRow">
+ 
+    </tbody>  
+    </table>
+   </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
